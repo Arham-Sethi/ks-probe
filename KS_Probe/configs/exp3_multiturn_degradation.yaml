@@ -1,0 +1,28 @@
+experiment_id: exp3_multiturn_degradation
+description: "RQ3 — Multi-Turn Degradation: PRA as conversation turn count grows"
+
+models:
+  - gpt-5.2
+  - claude-sonnet-4-6
+  - grok-4.1-fast
+  - deepseek-v3.2
+
+seeds: [1, 2, 3]
+
+# Turn checkpoints matching Fig 6/7 spec: {10, 20, 30, 50, 80, 120}
+turns: [10, 20, 30, 50, 80, 120]
+
+probes_per_run: 5
+probe_type_mix: [0.40, 0.35, 0.25]
+domain_mix: "equal"
+
+max_output_tokens: 1500
+max_concurrent: 3      # lower — conversations are long
+temperature: 0.0
+
+cost_confirm_threshold: 500.0
+dry_run: false
+mock_mode: false
+
+output_dir: outputs/exp3
+checkpoint_db: ""
