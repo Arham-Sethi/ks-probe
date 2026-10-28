@@ -1,0 +1,15 @@
+{
+  "global_seed": 42,
+  "created_at": "2026-03-06",
+  "description": "Root reproducibility seed for all KS-Probe experiments. All per-run seeds are derived deterministically from this value via SHA-256 hash of (global_seed, experiment_id, model_id, replicate).",
+  "experiment_seed_offsets": {
+    "exp1_context_fidelity": 100,
+    "exp2_positional_recall": 200,
+    "exp3_multiturn_degradation": 300,
+    "exp4_silent_truncation": 400,
+    "exp5_tokenizer_divergence": 500,
+    "ext1_token_budget": 600,
+    "ext2_semantic_conflict": 700,
+    "ext3_context_portability": 800
+  }
+}
